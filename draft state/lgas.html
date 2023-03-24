@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nigerian States and Local Governments</title>
+  <script>
+    function populateLGAs() {
+      const state = document.querySelector("#states").value;
+      const lgaSelect = document.querySelector("#lgas");
+
+      lgaSelect.innerHTML = "";
+
+      if (!state) {
+        lgaSelect.innerHTML = "<option value=''>Select a state first</option>";
+        return;
+      }
+
+      switch (state) {
+        case "Bayelsa":
+          lgaSelect.innerHTML = `
+            <option value="Brass">Brass</option>
+            <option value="Ekeremor">Ekeremor</option>
+            <option value="Kolokuma/Opokuma">Kolokuma/Opokuma</option>
+            <option value="Nembe">Nembe</option>
+            <option value="Ogbia">Ogbia</option>
+            <option value="Sagbama">Sagbama</option>
+            <option value="Southern Ijaw">Southern Ijaw</option>
+            <option value="Yenagoa">Yenagoa</option>
+          `;
+          break;
+        case "Abuja":
+          lgaSelect.innerHTML = `
+            <option value="Abaji">Abaji</option>
+            <option value="Bwari">Bwari</option>
+            <option value="Gwagwalada">Gwagwalada</option>
+            <option value="Kuje">Kuje</option>
+            <option value="Kwali">Kwali</option>
+            <option value="Municipal">Municipal</option>
+            <option value="Shari-Okai">Shari-Okai</option>
+          `;
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>Select a state:</h3>
+  <select id="states" onchange="populateLGAs()">
+    <option value="">Select a state</option>
+    <option value="Bayelsa">Bayelsa</option>
+    <option value="Abuja">Abuja</option>
+  </select>
+  <br><br>
+  <h3>Select a local government area:</h3>
+  <select id="lgas">
+    <option value="">Select a state first</option>
+  </select>
+</body>
+</html>

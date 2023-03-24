@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Stories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div id="quicklinks">
+            <ul>
+                <li><a href ="#">Home</a></li>
+                <li><a href ="#">Explore</a></li>
+                <li><a href ="#">Share</a></li>
+                <li><a href ="#">About</a></li>
+            </ul>
+        </div>
+
+        <h1>Travel Stories</h1>
+
+        <div id="searchbox">
+            <form>
+                <p>Search</p>
+                <input type="text" name="searchfield">
+                <input type="submit" value="Go">
+            </form>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href ="#">Destinations</a></li>
+                <li><a href ="#">Categories</a></li>
+                <li><a href ="#">My Stories</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Discover new places and experiences</h2>
+            <form>
+                <input type="text" name="keywordbox" value="Enter Keyword">
+                <select>
+                    <option value="all">All Categories</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="beach">Beach</option>
+                    <option value="city">City</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="food">Food</option>
+                </select>
+            </form>
+            <ul>
+                <li><a href="#">Paris, France</a></li>
+                <li><a href="#">Bangkok, Thailand</a></li>
+                <li><a href="#">Bali, Indonesia</a></li>
+                <li><a href="#">Sydney, Australia</a></li>
+                <li><a href="#">New York City, USA</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Share your travel stories</h2>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"><br><br>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location"><br><br>
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="adventure">Adventure</option>
+                    <option value="beach">Beach</option>
+                    <option value="city">City</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="food">Food</option>
+                </select><br><br>
+                <label for="story">Your Story:</label><br>
+                <textarea id="story" name="story" rows="10" cols="50"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Political Offices and Parties</title>
+</head>
+<body>
+	<h1>Political Offices and Parties</h1>
+	<label for="office">Select Office:</label>
+	<select id="office">
+		<option value="">Choose Office</option>
+		<option value="presidential">Presidential</option>
+		<option value="gubernatorial">Gubernatorial</option>
+	</select>
+	<br>
+	<label for="party">Select Party:</label>
+	<select id="party">
+		<option value="">Choose Party</option>
+		<option value="APC">APC</option>
+		<option value="LP">LP</option>
+		<option value="PDP">PDP</option>
+	</select>
+	<br><br>
+	<button onclick="submitSelection()">Submit</button>
+	<script>
+		function submitSelection() {
+			var office = document.getElementById("office").value;
+			var party = document.getElementById("party").value;
+			alert("You selected " + office + " office and " + party + " party.");
+		}
+	</script>
+</body>
+</html>

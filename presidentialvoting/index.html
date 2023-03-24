@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Voting Page</title>
+    <link rel="style" href="style.css">
+  <script>
+    function populateOffice() {
+      const office = document.querySelector("#states").value;
+      partySelect.innerHTML = "";
+
+      if (!office) {
+        partySelect.innerHTML = "<option value=''>Select an office first</option>";
+        return;
+      }
+
+      switch (office) {
+
+        case "Presidential":
+          partySelect.innerHTML = `
+            <option value="APC">APC</option>
+            <option value="LP">LP</option>
+            <option value="PDP">PDP</option>
+            <option value="Accord">Accord</option>
+            <option value="SDP">SDP</option> 
+          `;
+          break;
+
+        case "Gubernatorial":
+          partySelect.innerHTML = `
+            <option value="APC">APC</option>
+            <option value="LP">LP</option>
+            <option value="PDP">PDP</option>
+            <option value="Accord">Accord</option>
+            <option value="SDP">SDP</option>
+          `;
+          break;       
+      }
+    }
+  </script>
+</head>
+<body>
+    <h3>Voting Section</h3>
+  <select id="office" onchange="populateOffice()">
+    <option value="">Select an office</option>
+    <option value="Presidential">Presidential</option>
+    <option value="Gubernatorial">Gubernatorial</option>
+</body>
+</html>
+
